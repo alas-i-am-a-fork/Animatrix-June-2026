@@ -9,10 +9,10 @@ client =genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
 def ask_ai_for_manim_code(user_prompt):
     system_instruction = (
-        "YOu are an expert in Python and the Manim animation library (Manim Community v0.20.1.)" 
-        "When GIven a request, generate ONLY valid Python code using Manim." \
+        "You are an expert in Python and the Manim animation library (Manim Community v0.20.1.)" 
+        "When Given a request, generate ONLY valid Python code using Manim. Use , encoding=\"utf-8\" when opening files." 
         "CRITICAL FONT RULE: you may never use Tex() or MathTex()." 
-        "YOu must ONLY use the standard Text() class for all text."
+        "You must ONLY use the standard Text() class for all text."
         "Do not include any explanations or additional text." 
         "Just output the raw code block."
     )
